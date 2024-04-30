@@ -1,0 +1,21 @@
+<h1> Dios: {{dios}} </h1>
+<h1> Arma: {{arma}} </h1>
+<h1> Hijo: {{hijo}} </h1>
+
+
+<ul *ngIf="mostrarlist == true; else list2">
+  <li *ngFor="let item of ArrDios1" id="lista"> {{item}} </li>
+</ul>
+
+<ng-template #list2>
+  <ul *ngIf="mostrarlist == false">
+    <li *ngFor="let item of ArrDios2" id="lista"> {{item}} </li>
+  </ul>
+</ng-template>
+
+<button *ngIf="dios !== 'Yopuka' " (click)="DiosIop()" >Invocar Yopuka</button>
+<button *ngIf="dios !== 'Feca'" (click)="DiosaFeca()" >Invocar Feca</button>
+
+<button (click)="condicion()" class="btn btn-primary"> Cambiar Lista </button>
+
+<button (click)="borrarheroe()"> Borrar heroe</button>

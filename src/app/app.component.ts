@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AbrilCN';
+
+  edad= 10;
+
+  increment():void {
+    this.edad += 1;
+  }
+
+
 }
